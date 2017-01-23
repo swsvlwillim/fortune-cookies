@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 import webapp2
-from random import randint
+import  random 
 
 def getRandomFortune():
     #List of possible fortunes
@@ -41,7 +41,7 @@ def get(self):
 
     lucky_number = "<strong>" + random.randint(1,100) + "</strong>"
     number_sentence = 'Your lucky number is:' + "lucky-number"
-    number_paragraph = '<p>' +number sentence + '</p>'
+    number_paragraph = '<p>' +number_sentence + '</p>'
 
     cookie_again_button = "<a href='.'><button>Another cookie please!</button></a>"
 
