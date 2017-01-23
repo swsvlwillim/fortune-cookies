@@ -17,13 +17,13 @@
 import webapp2
 from random import randint
 
-    def getRandomFortune()
-        #List of possible fortunes
-        fortunes =[
-            "I see much code in your future",
-            "Consider eating more fortune cookies",
-            "You have tamed the mighty Python, now you must free it onto the Great Spider's Web"
-        ]
+def getRandomFortune()
+    #List of possible fortunes
+    fortunes =[
+    "I see much code in your future",
+    "Consider eating more fortune cookies",
+    "You have tamed the mighty Python, now you must free it onto the Great Spider's Web"
+]
 
         #randomly select one of the fortunes
         index = random.randint(0,2)
@@ -32,21 +32,21 @@ from random import randint
 
 
 class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        header = <h1>Fortune Cookie</h1>
+def get(self):
+    header = <h1>Fortune Cookie</h1>
 
-        fortune = "<srong>" + getRandomFortune() + "</strong>"
-        fortune_sentence = "Your fortune" + fortune
-        fortune_paragraph = "<p>" + fortune_sentence + "</p>"
+    fortune = "<srong>" + getRandomFortune() + "</strong>"
+    fortune_sentence = "Your fortune" + fortune
+    fortune_paragraph = "<p>" + fortune_sentence + "</p>"
 
-        lucky_number = "<strong>" + random.randint(1,100) + "</strong>"
-        number_sentence = 'Your lucky number is:' + "lucky-number"
-        number_paragraph = '<p>' +number sentence + '</p>'
+    lucky_number = "<strong>" + random.randint(1,100) + "</strong>"
+    number_sentence = 'Your lucky number is:' + "lucky-number"
+    number_paragraph = '<p>' +number sentence + '</p>'
 
-        cookie_again_button = "<a href='.'><button>Another cookie please!</button></a>"
+    cookie_again_button = "<a href='.'><button>Another cookie please!</button></a>"
 
-        content = header + fortune_paragraph + number_paragraph + cookie_again_button
-        self.response.write(content)
+    content = header + fortune_paragraph + number_paragraph + cookie_again_button
+    self.response.write(content)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
