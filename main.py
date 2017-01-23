@@ -39,8 +39,8 @@ def get(self):
     fortune_sentence = "Your fortune" + fortune
     fortune_paragraph = "<p>" + fortune_sentence + "</p>"
 
-    lucky_number = "<strong>" + random.randint(1,100) + "</strong>"
-    number_sentence = 'Your lucky number is:' + "lucky-number"
+    lucky_number = "<strong>" + str(random.randint(1,100)) + "</strong>"
+    number_sentence = 'Your lucky number is:' + lucky_number
     number_paragraph = '<p>' +number_sentence + '</p>'
 
     cookie_again_button = "<a href='.'><button>Another cookie please!</button></a>"
