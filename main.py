@@ -17,7 +17,7 @@
 import webapp2
 from random import randint
 
-def getRandomFortune()
+def getRandomFortune():
     #List of possible fortunes
     fortunes =[
     "I see much code in your future",
@@ -25,10 +25,10 @@ def getRandomFortune()
     "You have tamed the mighty Python, now you must free it onto the Great Spider's Web"
 ]
 
-        #randomly select one of the fortunes
-        index = random.randint(0,2)
+    #randomly select one of the fortunes
+    index = random.randint(0,2)
 
-        return fortunes[index]
+    return fortunes[index]
 
 
 class MainHandler(webapp2.RequestHandler):
